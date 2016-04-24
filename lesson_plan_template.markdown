@@ -1,46 +1,56 @@
 ---
-title: 
-length: 
-tags: 
+title: AJAX: Making the web snappy and dynamic
+length: 90min
+tags:
 ---
 
 ### Goals
 
 By the end of this lesson, you will know/be able to:
 
-* Goal 1
-* Goal 2
-* Goal 3
+* Know what AJAX is
+* Know when to use AJAX
+* Know how to use AJAX
 
 ### Structure
 
-#### Hook: <5 min
+#### Hook:
 
-* Captures student interest. 
-* Why is this lesson important? 
-* Examples: demonstration, story, problem to solve
+* Have you ever filled out a registration form only to have it tell you after you’ve submitted it that the username you requested is already taken? Wouldn’t it be great if the form told you if what you entered in the username box was available, and it did that every time you changed the entry, and without reloading the entire page (which would take forever)? What if you had to reload Gmail to see if you got a new message, or hit a ‘next’ button to see more Facebook posts? Enter AJAX.
+* AJAX doesn’t make the web; it makes the web better, faster, more responsive. In the last decade AJAX has gone from a rare feature to a necessary fundamental, and that trend only seems to be continuing. Modern single page applications (SPA’s) largely rely on AJAX to work. AJAX is everywhere, from Gmail to Facebook to chat boxes to StackOverflow.
 
-#### Opening: 1-2 min
+#### Opening:
 
-* What is this lesson about? 
-* What will students know or be able to do by the end of the class? What are the goals?
+* Don’t let the name scare you
+* AJAX is about the browser exchanging little bits of information with a server (yes, it can be more, but we’re going to focus on that aspect for now)
+* The goal of AJAX in web development is to prevent reloading an entire page to transfer a small amount of information
+* AJAX consists of a bunch of calls and responses
+* I’m going to teach you how to build a StackOverflow style voting system
 
 #### Introduction to New Material (I do)
 
-* instructor explains, shows, or demonstrates
-* Examples: lecture, slides, code demonstration
+* There’s a lot of back-and-forth (state) which can be ignored these days
+* There’s lots of systems for doing AJAX (XMLHttpRequest, fetch, jQuery). It doesn’t matter which one you use, the concept is always the same
+    * You request a “resource”
+    * There’s a delay -- maybe other stuff can happen during that time, maybe not
+    * You receive some sort of response
+
 
 #### Guided Practice (We do)
 
-* instructor and students both "doing"
-* Examples: code-along, hot seat, discussion, question/answer, students telling instructor what to write, students pairing with close guidance from instructor
+* (code-along) Make an AJAX request from the console in Chrome
+* QA
 
 #### Independent/Pair Practice (You do)
 
-* students "doing", instructor available as lifeline
-* Examples: questions in a Gist, implementing feature, creating diagram
+* We’re going to build a quote board. We’ll all be sharing the same quote board/backend. Make a system that (all without reloading the page):
+    * Lets users add new quotes
+    * Checks for newly added quotes every second
+    * When the user clicks the “up” arrow next to a quote, it increments that quote's score, when they click “down” it decrements it
+    * Bonus: Keeps the quotes ordered by score
 
-#### The Closing: ~5 min
+
+#### The Closing:
 
 * Check for understanding
 * Discuss any clarifications or student misconceptions
@@ -48,8 +58,9 @@ By the end of this lesson, you will know/be able to:
 
 ### Possible questions and/or misunderstandings
 
-* What questions might students ask during class, and how will you respond? 
-* What concepts might students misunderstand, and why? 
+* What happens if a call fails
+* Asynchronous code
+* Might mistake an implementation for the only way
 
 ### Slides
 
@@ -66,4 +77,3 @@ By the end of this lesson, you will know/be able to:
 ### Outside Resources / Further Reading
 
 * [Link to first outside resource]()
-
