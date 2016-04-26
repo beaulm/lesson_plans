@@ -1,7 +1,7 @@
 ---
 title: AJAX: Making the web snappy and dynamic
 length: 90min
-tags:
+tags: ajax, javascript, front-end
 ---
 
 ![I hate it when I'm studying and a velociraptor throws bananas at me]("http://turing.lynn-miller.com/autosuggest.gif")
@@ -102,6 +102,16 @@ document.getElementById('quoteForm').addEventListener('submit', function(e){
 * What happens if a call fails
 * Asynchronous code
 * Might mistake an implementation for the only way
+
+### Concepts:
+* Synchronous/asynchronous
+* Promises
+* Client-server model
+* JSON
+* Polyfill
+* Callbacks
+* Request headers & CORS (sigh)
+* Security (trusting data, XSS, etc)
 
 ### Slides
 
