@@ -56,16 +56,16 @@ No AJAX
 <!DOCTYPE html>
 <html>
 	<head>
-    <meta charset="utf-8" />
+		<meta charset="utf-8" />
 		<title>Simple AJAX example</title>
 	</head>
 	<body>
-	    <div id="quoteBox">"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away." ~ Antoine de Saint-Exupéry</div>
-	    <form id="quoteForm" method="POST">
-                <textarea id="random" name="random" rows="5"></textarea>
-                <br />
-		<input id="submit" name="submit" type="submit" value="Get another quote">
-	    </form>
+		<div id="quoteBox">"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away." ~ Antoine de Saint-Exupéry</div>
+		<form id="quoteForm" method="POST">
+			<textarea id="random" name="random" rows="5"></textarea>
+			<br />
+			<input id="submit" name="submit" type="submit" value="Get another quote">
+		</form>
 	</body>
 </html>
 ```
