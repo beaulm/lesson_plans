@@ -66,6 +66,7 @@ No AJAX
 			<br />
 			<input id="submit" name="submit" type="submit" value="Get another quote">
 		</form>
+    <script src="http://turing.lynn-miller.com/fetch.js"></script>
 	</body>
 </html>
 ```
