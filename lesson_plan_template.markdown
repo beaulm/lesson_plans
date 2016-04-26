@@ -4,7 +4,7 @@ length: 90min
 tags:
 ---
 
-![I hate it when I'm studying and a velociraptor throws bananas at me]("http://turing.lynn-miller.com/autosuggest.gif")
+![I hate it when I'm studying and a velociraptor throws bananas at me](http://turing.lynn-miller.com/autosuggest.gif "I hate it when I'm studying and a velociraptor throws bananas at me")
 
 ### Goals
 
