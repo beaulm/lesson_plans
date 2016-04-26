@@ -4,9 +4,11 @@ length: 90min
 tags:
 ---
 
+![I hate it when I'm studying and a velociraptor throws bananas at me]("http://turing.lynn-miller.com/autosuggest.gif")
+
 ### Goals
 
-By the end of this lesson, you will know/be able to:
+By the end of this lesson, you will:
 
 * Know what AJAX is
 * Know when to use AJAX
@@ -23,13 +25,13 @@ By the end of this lesson, you will know/be able to:
 
 * Don’t let the name scare you
 * AJAX is about the browser exchanging little bits of information with a server (yes, it can be more, but we’re going to focus on that aspect for now)
-* The goal of AJAX in web development is to prevent reloading an entire page to transfer a small amount of information
+* The goal of AJAX in web development is to prevent reloading an entire page in order to transfer a small amount of information
 * AJAX consists of a bunch of calls and responses
 * I’m going to teach you how to build a StackOverflow style voting system
 
 #### Introduction to New Material (I do)
 
-* There’s a lot of back-and-forth (state) which can be ignored these days
+* There’s a lot of back-and-forth (state) which you don't have to deal with much these days
 * There’s lots of systems for doing AJAX (XMLHttpRequest, fetch, jQuery). It doesn’t matter which one you use, the concept is always the same
     * You request a “resource”
     * There’s a delay -- maybe other stuff can happen during that time, maybe not
@@ -40,6 +42,45 @@ By the end of this lesson, you will know/be able to:
 
 * (code-along) Make an AJAX request from the console in Chrome
 * QA
+
+```javascript
+fetch('http://turing.lynn-miller.com/randomquote').then(function(response) {
+	return response.json();
+}).then(function(quote) {
+	console.log(quote);
+});
+```
+
+No AJAX
+```html
+<!DOCTYPE html>
+<html>
+	<head>
+    <meta charset="utf-8" />
+		<title>Simple AJAX example</title>
+	</head>
+	<body>
+	    <div id="quoteBox">"Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away." ~ Antoine de Saint-Exupéry</div>
+	    <form id="quoteForm" method="POST">
+        <textarea id="random" name="random" rows="5"></textarea>
+        <br />
+			  <input id="submit" name="submit" type="submit" value="Get another quote">
+		  </form>
+	</body>
+</html>
+```
+
+With AJAX
+```javascript
+document.getElementById('quoteForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  fetch('http://turing.lynn-miller.com/randomquote').then(function(response) {
+  	return response.json();
+  }).then(function(quote) {
+  	document.getElementById('quoteBox').innerHTML = quote;
+  });
+});
+```
 
 #### Independent/Pair Practice (You do)
 
