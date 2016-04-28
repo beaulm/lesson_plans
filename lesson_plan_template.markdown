@@ -113,19 +113,3 @@ document.getElementById('quoteForm').addEventListener('submit', function(e){
 * Callbacks
 * Request headers & CORS (sigh)
 * Security (trusting data, XSS, etc)
-
-### Slides
-
-* [Link to optional slides]()
-
-### Video
-
-* [Link to optional video]()
-
-### Repository
-
-* [Link to optional repo]()
-
-### Outside Resources / Further Reading
-
-* [Link to first outside resource]()
