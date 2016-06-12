@@ -246,7 +246,7 @@ Array.isArray(x)  // true
 
 so, we wanted to iterate over `var x = ["panda", "koala", "teddy"]` and `console.log` each bear we would write a for loop like this:
 ```js
-for(var i = 0; i < x.length; i++){
+for(var i = 0; i < x.length; i++) {
   console.log(x[i]); // "panda" "koala" "teddy"
 }
 ```
