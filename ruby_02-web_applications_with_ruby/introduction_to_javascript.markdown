@@ -56,6 +56,7 @@ Like Ruby, JavaScript uses duck typing. Unlike Ruby, you need to use the `var` k
 ```js
 var x = 1;
 console.log(x); // => 1
+
 x = 2;
 console.log(x); // => 2
 ```
@@ -154,7 +155,7 @@ function sayHello(name) {
 }
 
 sayHello('Alan Turing'); // Logs 'Hello, Alan Turing!'
-sayHello; // Doesn't log anything. The function was never called.
+sayHello; // Returns the whole function but doesn't log anything; the function was never called.
 sayHello(); // Logs 'Hello, undefined!' but does not raise an argument error.
 
 // Anonymous function
@@ -176,9 +177,15 @@ Let's take a look at passing a function as an argument to another function.
 ```js
 // Let's start out by defining some functions.
 
-function addTwo(addend) { return addend + 2; }
-function subtractOne(minuend) { return minuend - 1; }
-function multiplyByThree(factor) { return factor * 3; }
+function addTwo(num) {
+  return num + 2;
+}
+function subtractOne(num) {
+  return num - 1;
+}
+function multiplyByThree(inputNum) {
+  return inputNum * 3;
+}
 
 // Now let's set up a function that takes a function as an argument.
 
@@ -206,26 +213,12 @@ Copy and paste each into the Chrome Developer Tools. Did it work?
 
 ## Full-Group Instruction II: Control Flow and Array Iteration
 
-### Conditionals
-
-Conditional statements have a few extra decorations as compared to Ruby.
-
-```js
-var hoursOfSleep = 8;
-
-if (hoursOfSleep < 6) {
-  console.log('I am groggy.');
-} else {
-  console.log('I feel fantastic!');
-}
-```
-
 ### Iterating Over Arrays
 
 In recent versions of JavaScript. Arrays have a `forEach` method that acts kind of like Ruby's `each`. JavaScript does not have blocks like Ruby, but we can use an anonymous function in it's place.
 
 ```js
-var words = ['home', 'word', 'hello'];
+var words = ['home', 'test', 'hello'];
 
 words.forEach(function (word) {
   console.log(word);
@@ -235,13 +228,13 @@ words.forEach(function (word) {
 We could also use a reference to a named function.
 
 ```js
-var words = ['home', 'word', 'hello'];
-function yell(word) { console.log(word.toUpperCase()); }
+var words = ['home', 'test', 'hello'];
+function yell(word) {
+  console.log(word.toUpperCase());
+}
 
 words.forEach(yell);
 ```
-
-### Iterating Over Collections of Objects
 
 `forEach` is a prototype method on the Array object. It only works if the collection you are trying to iterate over is an array.  `var x = ["panda", "koala", "teddy"]`
 ```js
@@ -253,7 +246,9 @@ Array.isArray(x)  // true
 
 so, we wanted to iterate over `var x = ["panda", "koala", "teddy"]` and `console.log` each bear we would write a for loop like this:
 ```js
-for(var i = 0; i < x.length; i++){ console.log( x[i] ) } // "panda" "koala" "teddy" }
+for(var i = 0; i < x.length; i++){
+  console.log(x[i]); // "panda" "koala" "teddy"
+}
 ```
 
 ## Pair Experiment II: Iterating Over an Array of Functions
@@ -279,10 +274,16 @@ var cat = { language: 'Bucu', bodyType: 'chunky' };
 console.log(typeof cat); // => "object"
 ```
 
-You can access the properties of a JavaScript object using dot syntax.
+You can access the properties of a JavaScript object using dot syntax
 
 ```js
 console.log(cat.bodyType); // 'chunky'
+```
+
+or square brackets:
+
+```js
+console.log(cat.['bodyType']); // 'chunky'
 ```
 
 You can even nest objects.
@@ -303,7 +304,10 @@ We can also assign functions as object properties.
 ```js
 var cat = {
   name: 'Bucu',
-  sayHello: function () { console.log("Hello, I'm " + this.name ); }
+  sayHello: function () {
+    console.log("Hello, I'm " + this.name );
+  },
+  age: 7
 }
 
 cat.sayHello(); // 'Hello, I'm Bucu'
