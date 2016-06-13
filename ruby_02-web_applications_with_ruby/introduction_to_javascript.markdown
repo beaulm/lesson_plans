@@ -245,7 +245,7 @@ Array.isArray(bears)  // true
 
 `for(initialization; condition; final-expression) { doSomething } `
 
-so, we wanted to iterate over `var x = ["panda", "koala", "teddy"]` and `console.log` each bear we would write a for loop like this:
+so, we wanted to iterate over `var bears = ["panda", "koala", "teddy"]` and `console.log` each bear we would write a for loop like this:
 ```js
 for(var i = 0; i < bears.length; i++) {
   console.log(bears[i]); // "panda" "koala" "teddy"
