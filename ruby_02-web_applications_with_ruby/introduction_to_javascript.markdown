@@ -170,6 +170,7 @@ var addTwo = function (addend) {
 };
 
 addTwo(2) // 4
+
 ```
 
 Let's take a look at passing a function as an argument to another function.
@@ -236,9 +237,9 @@ function yell(word) {
 words.forEach(yell);
 ```
 
-`forEach` is a prototype method on the Array object. It only works if the collection you are trying to iterate over is an array.  `var x = ["panda", "koala", "teddy"]`
+`forEach` is a prototype method on the Array object. It only works if the collection you are trying to iterate over is an array.  `var bears = ["panda", "koala", "teddy"]`
 ```js
-Array.isArray(x)  // true
+Array.isArray(bears)  // true
 ```
  We can however use a for loop instead of forEach.
 
@@ -246,8 +247,8 @@ Array.isArray(x)  // true
 
 so, we wanted to iterate over `var x = ["panda", "koala", "teddy"]` and `console.log` each bear we would write a for loop like this:
 ```js
-for(var i = 0; i < x.length; i++) {
-  console.log(x[i]); // "panda" "koala" "teddy"
+for(var i = 0; i < bears.length; i++) {
+  console.log(bears[i]); // "panda" "koala" "teddy"
 }
 ```
 
@@ -283,7 +284,7 @@ console.log(cat.bodyType); // 'chunky'
 or square brackets:
 
 ```js
-console.log(cat.['bodyType']); // 'chunky'
+console.log(cat['bodyType']); // 'chunky'
 ```
 
 You can even nest objects.
